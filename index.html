@@ -9,6 +9,9 @@
     <title>AS-Techno</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+    
+    
+
   </head>
   <body>
     <header>
@@ -210,6 +213,7 @@
         <div class="p-1 bg-dark text-white text-center">@AlekseiNikonov2020</div>
       </div>
     </footer>
+    <a href="#" class="scrollup">Наверх</a>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -220,7 +224,27 @@
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+       
+      $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+      $('.scrollup').fadeIn();
+      } else {
+      $('.scrollup').fadeOut();
+      }
+      });
+       
+      $('.scrollup').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 450);
+      return false;
+      });
+       
+      });
+      </script>
+    
   </body>
 </html>
